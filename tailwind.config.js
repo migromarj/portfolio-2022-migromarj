@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      signature: ["Pacifico"],
+      signature: ["Qwitcher Grypen"],
     },
   },
   plugins: [],
