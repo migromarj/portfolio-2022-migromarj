@@ -27,7 +27,7 @@ const NavBar = () => {
     ]
 
     return (
-        <div className='flex justify-between items-center w-full h-20 px-4 text-black bg-yellow-200 fixed'>
+        <div className='z-20 flex justify-between items-center w-full h-20 px-4 text-black bg-yellow-200 fixed'>
             <div>
                 <h1 className='text-6xl font-signature font-bold ml-2'>migromarj</h1>
             </div>
@@ -47,7 +47,7 @@ const NavBar = () => {
             </div>
 
             {nav && (
-                <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-yellow-200 to-yellow-100 text-gray-600'>
+                <ul className='visible md:invisible flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-yellow-200 to-yellow-100 text-gray-600'>
                     
                     {links.map(link => (
 
