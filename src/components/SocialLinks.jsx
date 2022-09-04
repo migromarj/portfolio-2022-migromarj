@@ -15,7 +15,7 @@ const SocialLinks = () => {
                     LinkedIn <FaLinkedin size={iconSize} />
                 </>
             ),
-            href: 'https://www.linkedin.com/in/miguel-romero-arjona-88aaa021b/',
+            href: 'https://www.linkedin.com/in/miguel-romero-arjona',
             style: 'rounded-tr-md'
         },
         {
