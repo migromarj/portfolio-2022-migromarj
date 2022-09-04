@@ -1,4 +1,5 @@
 import React from 'react'
+
 import laptop from '../assets/laptop.gif'
 
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
@@ -70,7 +71,7 @@ const Home = () => {
                         >
                             <a
                                 href={href}
-                                className='mx-10 items-center w-full text-yellow-200'
+                                className='mx-8 items-center w-full text-yellow-200'
                                 target='_blank'
                                 rel='noreferrer'
                             >

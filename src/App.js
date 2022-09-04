@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Particle from "./components/Particle";
 import SocialLinks from "./components/SocialLinks";
+import Technologies from "./components/Technologies";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <Home />
       <About />
+      <Technologies />
 
       <SocialLinks />
       
