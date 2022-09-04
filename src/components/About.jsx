@@ -12,7 +12,7 @@ const About = () => {
                         <p className='z-10 text-4xl font-bold md:text-left text-center border-b-4 border-purple-600 text-purple-600'>
                             About
                         </p>
-                        <p className='z-10 text-xl mt-10 mb-10'>
+                        <p className='z-10 text-xl mt-12 mb-10'>
                             I'm a student of Computer Software Engineering at the University of Seville. Behind: a lot of enthusiasm, a lot of learning, work and effort, but also great rewards:
                         </p>
                         <ul className='z-10 text-xl'>

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { FaGithub } from 'react-icons/fa'
+
 import SevenIslands from '../assets/projects/7islands.jpg'
 import DogAPI from '../assets/projects/dogapi.svg'
 import PhotEye from '../assets/projects/photeye.png'
@@ -10,7 +12,7 @@ import Skeletonization from '../assets/projects/skeletonization.png'
 import SnakeGame from '../assets/projects/snake.png'
 
 const Projects = () => {
-    
+
     const projects = [
         {
             id: 1,
@@ -39,7 +41,7 @@ const Projects = () => {
         {
             id: 5,
             src: RN,
-            name: 'Task App with React Native',
+            name: 'Task App - React Native',
             link: 'https://github.com/migromarj/React-Native-TaskApp',
         },
         {
@@ -53,11 +55,12 @@ const Projects = () => {
             src: DogAPI,
             name: 'DogAPI App',
             link: 'https://github.com/migromarj/DogAPI-App',
+            style: 'mb-0 sm:mb-24 1.5md:mb-0'
         },
         {
             id: 8,
             src: KT,
-            name: 'Task App with Kotlin',
+            name: 'Task App - Kotlin',
             link: 'https://github.com/migromarj/Kotlin-Task-App',
             style: 'mb-24 1.5md:mb-0'
         },
@@ -66,16 +69,16 @@ const Projects = () => {
     return (
         <div
             name='projects'
-            className='bg-gradient-to-b from-gray-700 to-black w-full text-white md:h-screen'
+            className='bg-gradient-to-b from-gray-700 to-black w-full text-white md:h-max xl:h-screen'
         >
             <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-                <div className='pb-8'>
-                    <p className='text-4xl font-bold inline border-b-4 border-purple-400 text-purple-400'>
+                <div className='pt-4 pb-8'>
+                    <p className='text-4xl font-bold md:text-left text-center border-b-4 border-purple-400 text-purple-400'>
                         Projects
                     </p>
                 </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-12 sm:px-0'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 1.75md:grid-cols-4 gap-8 px-12 sm:px-0'>
                     {projects.map(({ id, src, name, link, style }) => (
                         <div key={id} className={`z-10 shadow-md shadow-gray-600 rounded-lg bg-gray-300 pt-2 ${style}`}>
                             <img
@@ -83,15 +86,16 @@ const Projects = () => {
                                 alt={name}
                                 className='mx-auto rounded-md duration-200 hover:scale-105 h-20'
                             />
-                            
+
                             <div className='flex items-center justify-center mt-1'>
                                 <p className='text-black'>
                                     {name}
                                 </p>
                             </div>
                             <div className='flex items-center justify-center'>
-                                <a href={link} className='flex items-center justify-center w-1/2 px-4 py-3 m-4 duration-200 hover:scale-105 bg-purple-400 rounded-full'>
-                                    Code
+
+                                <a href={link} className='flex items-center justify-center w-1/2 px-4 py-3 m-4 duration-200 hover:scale-105 bg-black rounded-full'>
+                                    <FaGithub size={30} />&nbsp;&nbsp;Code
                                 </a>
                             </div>
                         </div>
