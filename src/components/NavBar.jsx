@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-scroll";
 
 import { FaBars, FaTimesCircle } from 'react-icons/fa'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
@@ -28,12 +29,14 @@ const NavBar = () => {
 
     ]
 
+    const iconSize = 22
+
     const socialLinks = [
         {
             id: 1,
             child: (
                 <>
-                    <FaLinkedin size={22} />
+                    <FaLinkedin size={iconSize} />
                 </>
             ),
             href: 'https://www.linkedin.com/in/miguel-romero-arjona-88aaa021b/',
@@ -42,7 +45,7 @@ const NavBar = () => {
             id: 2,
             child: (
                 <>
-                    <FaGithub size={22} />
+                    <FaGithub size={iconSize} />
                 </>
             ),
             href: 'https://github.com/migromarj',
@@ -51,7 +54,7 @@ const NavBar = () => {
             id: 3,
             child: (
                 <>
-                    <HiOutlineMail size={22} />
+                    <HiOutlineMail size={iconSize} />
                 </>
             ),
             href: 'mailto:miguelromeroarjona@gmail.com',
@@ -59,13 +62,17 @@ const NavBar = () => {
     ];
 
     return (
-        <div className='z-20 flex justify-between items-center w-full h-20 px-4 text-black bg-yellow-200 fixed'>
+        <div className='z-30 flex justify-between items-center w-full h-20 px-4 text-black bg-yellow-200 fixed'>
             <div>
-                <h1 className='text-6xl font-signature font-bold ml-2'>migromarj</h1>
+                <h1 className='text-6xl font-signature font-bold ml-2 select-none'>
+                    <Link to={'home'} smooth duration={500}>
+                        migromarj
+                    </Link>
+                </h1>
             </div>
 
             <ul className='hidden 1.5md:flex 1.5xl:hidden'>
-                {socialLinks.map(({ id, child, href}) => (
+                {socialLinks.map(({ id, child, href }) => (
                     <li
                         key={id}
                         className={
@@ -89,7 +96,9 @@ const NavBar = () => {
                 {links.map(link => (
 
                     <li key={link.id} className='text-lg px-4 cursor-pointer capitalize font-medium text-gray-600 hover:scale-105 duration-200'>
-                        {link.link}
+                        <Link to={link.link} smooth duration={500}>
+                            {link.link}
+                        </Link>
                     </li>
                 ))}
             </ul>

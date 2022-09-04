@@ -6,12 +6,15 @@ import { HiOutlineMail } from 'react-icons/hi'
 
 const Home = () => {
 
+    const iconSize = 62
+    const linkClass = 'bg-purple-600 px-4 rounded-full fixed'
+
     const socialLinks = [
         {
             id: 1,
             child: (
                 <>
-                    <FaLinkedin size={22} />
+                    <FaLinkedin size={iconSize} className={linkClass}/>
                 </>
             ),
             href: 'https://www.linkedin.com/in/miguel-romero-arjona-88aaa021b/',
@@ -20,7 +23,7 @@ const Home = () => {
             id: 2,
             child: (
                 <>
-                    <FaGithub size={22} />
+                    <FaGithub size={iconSize} className={linkClass}/>
                 </>
             ),
             href: 'https://github.com/migromarj',
@@ -29,7 +32,7 @@ const Home = () => {
             id: 3,
             child: (
                 <>
-                    <HiOutlineMail size={22} />
+                    <HiOutlineMail size={iconSize} className={linkClass} />
                 </>
             ),
             href: 'mailto:miguelromeroarjona@gmail.com',
@@ -43,7 +46,9 @@ const Home = () => {
             <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
                 <div className='flex flex-col  justify-center h-full'>
 
-                    <h3 className='z-10 text-3xl md:text-5xl text-gray-800 my-8 md:text-left text-center'>Hi there</h3>
+                    <h3 className='z-10 text-3xl md:text-5xl text-gray-800 my-8 md:text-left text-center'>
+                        Hi there
+                    </h3>
                     <h2 className='z-10 text-4xl md:text-7xl font-bold text-black md:text-left text-center'>
                         I'm Miguel Romero Arjona
                     </h2>
@@ -53,18 +58,19 @@ const Home = () => {
                     <img src={laptop} alt='A laptop' className='mx-auto w-2/3 md:w-full' />
                 </div>
             </div>
-            <div className='z-10'>
+            
+            <div className='z-20'>
                 <ul className='flex justify-center mb-8'>
                     {socialLinks.map(({ id, child, href }) => (
                         <li
                             key={id}
                             className={
-                                'flex justify-between items-center w-13 mx-1 h-14 px-4 rounded-full bg-purple-600 1.5md:hidden'
+                                'items-center h-14 px-4 1.5md:hidden'
                             }
                         >
                             <a
                                 href={href}
-                                className='flex justify-between items-center w-full text-yellow-200'
+                                className='mx-10 items-center w-full text-yellow-200'
                                 target='_blank'
                                 rel='noreferrer'
                             >

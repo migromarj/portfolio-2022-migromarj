@@ -5,12 +5,14 @@ import { HiOutlineMail } from 'react-icons/hi'
 
 const SocialLinks = () => {
 
+    const iconSize = 27
+
     const links = [
         {
             id: 1,
             child: (
                 <>
-                    LinkedIn <FaLinkedin size={27} />
+                    LinkedIn <FaLinkedin size={iconSize} />
                 </>
             ),
             href: 'https://www.linkedin.com/in/miguel-romero-arjona-88aaa021b/',
@@ -20,7 +22,7 @@ const SocialLinks = () => {
             id: 2,
             child: (
                 <>
-                    GitHub <FaGithub size={27} />
+                    GitHub <FaGithub size={iconSize} />
                 </>
             ),
             href: 'https://github.com/migromarj',
@@ -29,7 +31,7 @@ const SocialLinks = () => {
             id: 3,
             child: (
                 <>
-                    Mail <HiOutlineMail size={27} />
+                    Mail <HiOutlineMail size={iconSize} />
                 </>
             ),
             href: 'mailto:miguelromeroarjona@gmail.com',

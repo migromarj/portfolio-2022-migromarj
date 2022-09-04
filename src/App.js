@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Particle from "./components/Particle";
@@ -8,9 +9,10 @@ function App() {
     <div>
       
       <Particle />
-      
+
       <NavBar />
       <Home />
+      <About />
 
       <SocialLinks />
       
