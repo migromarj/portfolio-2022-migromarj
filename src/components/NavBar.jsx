@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from "react-scroll";
+import { Link } from 'react-scroll'
 
 import { FaBars, FaTimesCircle } from 'react-icons/fa'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
@@ -113,7 +113,9 @@ const NavBar = () => {
                     {links.map(link => (
 
                         <li key={link.id} className='text-3xl px-4 cursor-pointer capitalize py-6'>
-                            {link.link}
+                            <Link to={link.link} smooth duration={500} onClick={() => setNav(!nav)}>
+                                {link.link}
+                            </Link>
                         </li>
                     ))}
 
