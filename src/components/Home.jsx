@@ -8,7 +8,7 @@ import { HiOutlineMail } from 'react-icons/hi'
 const Home = () => {
 
     const iconSize = 62
-    const linkClass = 'bg-purple-600 px-4 rounded-full fixed'
+    const linkClass = 'bg-purple-600 px-4 rounded-full'
 
     const socialLinks = [
         {
@@ -42,11 +42,10 @@ const Home = () => {
 
     return (
         <div name='home'
-            className='h-screen w-full bg-gradient-to-b from-yellow-200 to-yellow-100 flex flex-col'>
-
+            className='h-max xl:h-screen w-full bg-gradient-to-b from-yellow-200 to-yellow-100 flex flex-col'>
+            <div className='container h-20'></div>
             <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
                 <div className='flex flex-col  justify-center h-full'>
-
                     <h3 className='z-10 text-3xl md:text-5xl text-gray-800 my-8 md:text-left text-center'>
                         Hi there
                     </h3>
@@ -61,7 +60,7 @@ const Home = () => {
             </div>
             
             <div className='z-20'>
-                <ul className='flex justify-center mb-8'>
+                <ul className='flex justify-center mb-20'>
                     {socialLinks.map(({ id, child, href }) => (
                         <li
                             key={id}
