@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { FaGithub } from 'react-icons/fa'
-
 import SevenIslands from '../assets/projects/7islands.jpg'
 import DogAPI from '../assets/projects/dogapi.svg'
 import PhotEye from '../assets/projects/photeye.png'
@@ -10,6 +8,7 @@ import RN from '../assets/projects/rn.png'
 import KT from '../assets/projects/kt.png'
 import Skeletonization from '../assets/projects/skeletonization.png'
 import SnakeGame from '../assets/projects/snake.png'
+import ProjectCard from './ProjectCard'
 
 const Projects = () => {
 
@@ -72,7 +71,7 @@ const Projects = () => {
             className='bg-gradient-to-b from-gray-700 to-black w-full text-white md:h-max xl:h-screen'
         >
             <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-                <div className='pt-4 pb-8'>
+                <div className='z-10 pt-4 pb-8'>
                     <p className='text-4xl font-bold md:text-left text-center border-b-4 border-purple-400 text-purple-400'>
                         Projects
                     </p>
@@ -80,25 +79,7 @@ const Projects = () => {
 
                 <div className='grid grid-cols-1 sm:grid-cols-2 1.75md:grid-cols-4 gap-8 px-12 sm:px-0'>
                     {projects.map(({ id, src, name, link, style }) => (
-                        <div key={id} className={`z-10 shadow-md shadow-gray-600 rounded-lg bg-gray-300 pt-2 ${style}`}>
-                            <img
-                                src={src}
-                                alt={name}
-                                className='mx-auto rounded-md duration-200 hover:scale-105 h-20'
-                            />
-
-                            <div className='flex items-center justify-center mt-1'>
-                                <p className='text-black'>
-                                    {name}
-                                </p>
-                            </div>
-                            <div className='flex items-center justify-center'>
-
-                                <a href={link} className='flex items-center justify-center w-1/2 px-4 py-3 m-4 duration-200 hover:scale-105 bg-black rounded-full'>
-                                    <FaGithub size={30} />&nbsp;&nbsp;Code
-                                </a>
-                            </div>
-                        </div>
+                        <ProjectCard id={id} src={src} name={name} link={link} style={style} />
                     ))}
                 </div>
             </div>
